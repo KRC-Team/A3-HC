@@ -39,5 +39,9 @@ civilian_vehicles = [
     "C_Truck_02_fuel_F",
     "C_Truck_02_transport_F",
     "C_Truck_02_covered_F",
-    "C_Truck_02_box_F"
+    "C_Truck_02_box_F",
+	"C_IDAP_Van_02_medevac_F",
+	"C_IDAP_Heli_Transport_02_F",
+	"C_Heli_Light_01_civil_F",
+	"C_Plane_Civil_01_racing_F"
 ];

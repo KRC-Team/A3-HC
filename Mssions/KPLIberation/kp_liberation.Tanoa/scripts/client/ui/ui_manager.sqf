@@ -39,10 +39,10 @@ private _showResources = false;
 private _currentFob = "";
 
 while {true} do {
-    _currentFob = player getVariable ["KPLIB_fobName", ""];
-    _showHud = alive player && {!dialog && {isNull curatorCamera && {!cinematic_camera_started && !halojumping}}};
-    _visibleMap = visibleMap;
 
+    _currentFob = player getVariable ["KPLIB_fobName", ""];
+    _showHud = visibleMap;//alive player && {!dialog && {isNull curatorCamera && {!cinematic_camera_started && !halojumping}}};
+    _visibleMap = visibleMap;
     if (_showHud && {!_overlayVisible}) then {
         "KPLIB_ui" cutRsc ["KPLIB_overlay", "PLAIN", 1];
         _uiticks = 0;
@@ -53,7 +53,7 @@ while {true} do {
 
     _overlay = uiNamespace getVariable ["KPLIB_overlay", displayNull];
     _overlayVisible = !isNull _overlay;
-
+	
     // Player is at FOB
     if (_currentFob != "" || {_visibleMap}) then {
         _showResources = true;

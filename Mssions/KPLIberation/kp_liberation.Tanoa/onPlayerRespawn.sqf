@@ -12,6 +12,38 @@ if (isNil "GRLIB_respawn_loadout") then {
     player linkItem "ItemCompass";
     player linkItem "ItemWatch";
     player linkItem "ItemRadio";
+	
+	comment "Add weapons";
+	player addWeapon "rhs_weap_m4a1_carryhandle";
+	player addPrimaryWeaponItem "rhsusf_acc_nt4_black";
+	player addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
+	player addPrimaryWeaponItem "rhsusf_acc_ACOG2_USMC";
+	player addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855_Stanag";
+	player addPrimaryWeaponItem "rhsusf_acc_kac_grip";
+	player addWeapon "rhsusf_weap_m1911a1";
+	player addHandgunItem "rhsusf_mag_7x45acp_MHP";
+
+	comment "Add containers";
+	player forceAddUniform "rhs_uniform_FROG01_wd";
+	player addVest "rhsusf_spc_light";
+
+	comment "Add binoculars";
+	player addWeapon "Binocular";
+
+	comment "Add items to containers";
+	player addItemToUniform "FirstAidKit";
+	player addItemToUniform "rhsusf_ANPVS_14";
+	player addItemToUniform "Chemlight_green";
+	for "_i" from 1 to 2 do {player addItemToUniform "Chemlight_red";};
+	player addItemToUniform "rhs_mag_30Rnd_556x45_M855_Stanag";
+	for "_i" from 1 to 4 do {player addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+	player addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red";
+	for "_i" from 1 to 3 do {player addItemToVest "rhsusf_mag_7x45acp_MHP";};
+	for "_i" from 1 to 2 do {player addItemToVest "rhs_mag_mk3a2";};
+	player addItemToVest "rhs_mag_mk84";
+	player addItemToVest "Chemlight_green";
+	player addHeadgear "rhsusf_mich_helmet_marpatwd_norotos";
+	player addGoggles "rhs_googles_clear";
 } else {
     sleep 4;
     [player, GRLIB_respawn_loadout] call KPLIB_fnc_setLoadout;

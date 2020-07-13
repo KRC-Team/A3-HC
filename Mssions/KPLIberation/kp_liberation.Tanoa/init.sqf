@@ -56,3 +56,4 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 };
 
 KPLIB_init = true;
+execVM "GREUH\scripts\GREUH_playermarkers.sqf";

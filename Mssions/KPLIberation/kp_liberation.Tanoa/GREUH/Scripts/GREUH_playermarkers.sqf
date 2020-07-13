@@ -12,6 +12,8 @@ if ( side player == GRLIB_side_friendly ) then {
 	_color = GRLIB_color_enemy;
 };
 
+show_teammates = true;
+
 while { true } do {
 	waitUntil { sleep 0.2; show_teammates };
 	while { show_teammates } do {
